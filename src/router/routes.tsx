@@ -1,16 +1,16 @@
-import { createBrowserRouter } from "react-router-dom";
-import DashBordPage from "../pages/dashbord";
-import { Layout } from "../components/layout";
+import { createBrowserRouter } from 'react-router-dom';
+import DashBordPage from '../pages/dashbord';
+import { Layout } from '../components/layout';
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [{ index: true, element: <DashBordPage /> }],
   },
 
   {
-    path: "/auth",
+    path: '/auth',
     children: [{ index: true, element: <DashBordPage /> }],
   },
 ]);
