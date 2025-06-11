@@ -1,4 +1,4 @@
-@use "@/styles/colors.scss" as *;
+@use '@/styles/colors.scss' as *;
 
 .button {
   display: flex;
@@ -6,7 +6,7 @@
   gap: 11px;
   border: none;
   transition: background-color 0.2s;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   cursor: pointer;
 }

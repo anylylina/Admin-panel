@@ -1,8 +1,8 @@
-import { Button } from "../../ui/button";
-import SendSvg from "@/assets/icons/send.svg";
-import SettingSVG from "@/assets/icons/setting.svg";
-import styles from "./dashbord.module.scss";
-import { SettingIcon } from "../../ui/icons/settings-icon";
+import { Button } from '../../ui/button';
+import SendSvg from '@/assets/icons/send.svg';
+import SettingSVG from '@/assets/icons/setting.svg';
+import styles from './dashbord.module.scss';
+import { SettingIcon } from '../../ui/icons/settings-icon';
 
 const DashBordPage = () => {
   return (
