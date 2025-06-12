@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import DashBordPage from '../pages/dashbord';
+import DashBordPage from '../pages/dashbord/index';
 import { Layout } from '../components/layout';
 
 export const router = createBrowserRouter([

@@ -1,0 +1,23 @@
+@use '@/styles/colors.scss' as *;
+
+.wrap {
+  height: 100%;
+  border-right: 1px solid $color_gray_ligth;
+  background-color: #fff;
+  padding-top: 35px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  align-items: center;
+}
+
+.logo__text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 100%;
+  color: $color_blue_dark;
+}
