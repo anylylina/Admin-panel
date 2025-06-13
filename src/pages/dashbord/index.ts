@@ -1,0 +1,1 @@
+export { DashBordPage } from './dashbord';
