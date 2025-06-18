@@ -1,33 +1,55 @@
 @use '@/styles/colors.scss' as *;
 
 .item {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  color: $color_blue_dark;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 10px 10px 38px;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 8px;
   transition: background-color 0.2s;
+
+  .label {
+    color: $color_gray_soft;
+    transition: color 0.2s;
+  }
+
+  .icon {
+    color: $color_gray_soft;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
 
   &:hover {
     background-color: $color_gray_ligth;
+
+    .label,
+    .icon {
+      color: $color_blue_label;
+    }
   }
-}
 
-.active {
-  background-color: $color_blue_light;
-  color: $color_blue_dark;
-  font-weight: 700;
-}
+  &.active {
+    background-color: #fff;
 
-.icon {
-  width: 20px;
-  height: 20px;
-}
+    .label,
+    .icon {
+      color: $color_blue_label;
+    }
 
-.label {
-  color: $color_gray_soft;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 5px;
+      background-color: $color_blue_label;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
 }

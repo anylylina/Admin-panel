@@ -10,7 +10,7 @@ import { CreditCardsIcon } from '../../ui/icons/credit-cards-icon';
 import { LoansIcon } from '../../ui/icons/loans-icon';
 import { ServicesIcon } from '../../ui/icons/services-icon';
 import { PrivilegesIcon } from '../../ui/icons/privileges-icon';
-import { SettingIcon } from '../../ui/icons/settings-icon';
+import { ConfigurationIcon } from '../../ui/icons/configuration-icon';
 
 export const Sidebar = () => {
   const sidebarItems = [
@@ -22,7 +22,7 @@ export const Sidebar = () => {
     { to: '/loans', label: 'Loans', icon: <LoansIcon /> },
     { to: '/services', label: 'Services', icon: <ServicesIcon /> },
     { to: '/my-privileges', label: 'My Privileges', icon: <PrivilegesIcon /> },
-    { to: '/setting', label: 'Setting', icon: <SettingIcon /> },
+    { to: '/setting', label: 'Setting', icon: <ConfigurationIcon /> },
   ];
 
   return (
