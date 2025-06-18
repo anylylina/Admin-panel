@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import { Avatar } from '../../ui/avatar/avatar';
 import { Button } from '../../ui/button';
 import { NotificationIcon } from '../../ui/icons/notification-icon';
@@ -5,12 +6,25 @@ import { SettingIcon } from '../../ui/icons/settings-icon';
 import { SearchInput } from '../../ui/inputs/search-input';
 import styles from './header.module.scss';
 
-type HeaderProps = {
-  pageTitle?: string;
-  icon?: React.ReactNode;
-};
+export const Header = () => {
+  const location = useLocation();
 
-export const Header = ({ icon, pageTitle = 'Overview' }: HeaderProps) => {
+  const pageTitles: Record<string, string> = {
+    '/dashboard': 'Dashboard',
+    '/transactions': 'Transactions',
+    '/accounts': 'Accounts',
+    '/investments': 'Investments',
+    '/credit-cards': 'Credit Cards',
+    '/loans': 'Loans',
+    '/services': 'Services',
+    '/my-privileges': 'My Privileges',
+    '/setting': 'Settings',
+  };
+
+  const currentPath = location.pathname;
+  const pageTitle =
+    currentPath === '/dashboard' ? 'Overview' : pageTitles[currentPath] || 'Overview';
+
   return (
     <header className={styles.header}>
       <h1 className={styles.pageTitle}>{pageTitle}</h1>
@@ -19,10 +33,11 @@ export const Header = ({ icon, pageTitle = 'Overview' }: HeaderProps) => {
 
       <div className={styles.rightContent}>
         <SearchInput />
-
         <Button onClick={() => {}} icon={<SettingIcon />} />
         <Button onClick={() => {}} icon={<NotificationIcon />} />
-        <div className={styles.avatarIcon}>{icon || <Avatar />}</div>
+        <div className={styles.avatarIcon}>
+          <Avatar />
+        </div>
       </div>
     </header>
   );

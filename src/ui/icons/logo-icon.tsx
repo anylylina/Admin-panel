@@ -11,13 +11,13 @@ export const LogoIcon = (props: SVGProps<SVGSVGElement>) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       {...props}
     >
-      <rect width="36" height="36" fill="url(#pattern0_105_460)" />
+      <rect width="36" height="36" fill="url(#pattern0_215_66)" />
       <defs>
-        <pattern id="pattern0_105_460" patternContentUnits="objectBoundingBox" width="1" height="1">
-          <use xlinkHref="#image0_105_460" transform="scale(0.00195312)" />
+        <pattern id="pattern0_215_66" patternContentUnits="objectBoundingBox" width="1" height="1">
+          <use xlinkHref="#image0_215_66" transform="scale(0.00195312)" />
         </pattern>
         <image
-          id="image0_105_460"
+          id="image0_215_66"
           width="512"
           height="512"
           preserveAspectRatio="none"
