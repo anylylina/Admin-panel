@@ -1,0 +1,33 @@
+@use '@/styles/colors.scss' as *;
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $color_blue_dark;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $color_gray_ligth;
+  }
+}
+
+.active {
+  background-color: $color_blue_light;
+  color: $color_blue_dark;
+  font-weight: 700;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  color: $color_gray_soft;
+}
