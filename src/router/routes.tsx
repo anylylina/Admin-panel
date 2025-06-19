@@ -10,6 +10,7 @@ import { LoansPage } from '../pages/loans/loans';
 import { ServicesPage } from '../pages/services-page/services';
 import { PrivilegesPage } from '../pages/privileges/privileges';
 import { ConfigurationPage } from '../pages/configuration-page/configuration';
+import { LoginPage } from '../pages/login/login-page';
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,9 @@ export const router = createBrowserRouter([
 
   {
     path: '/auth',
-    children: [{ index: true, element: <DashBordPage /> }],
+    children: [
+      { index: true, element: <LoginPage /> },
+      { path: 'login', element: <LoginPage /> },
+    ],
   },
 ]);
