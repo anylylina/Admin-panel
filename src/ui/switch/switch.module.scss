@@ -1,0 +1,33 @@
+@use '@/styles/colors.scss' as *;
+
+.switch {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: $color_white_dark;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.thumb {
+  width: 18px;
+  height: 18px;
+  background-color: $color_white_normal;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  transition: left 0.3s ease;
+}
+
+.checked {
+  background-color: $color_green_light;
+}
+
+.checked .thumb {
+  left: 23px;
+}
