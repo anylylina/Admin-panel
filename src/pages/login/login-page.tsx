@@ -23,10 +23,10 @@ export const LoginPage = () => {
         <span className={styles.logo__text}>BankDash.</span>
       </div>
 
-      <div className={styles.formBox}>
+      <div className={styles.form_box}>
         <h2 className={styles.title}>Sign In</h2>
         <form className={styles.form} onSubmit={e => e.preventDefault()}>
-          <div className={styles.inputGroup}>
+          <div className={styles.input_group}>
             <label htmlFor="email">Email</label>
             <Input
               type="email"
@@ -37,7 +37,7 @@ export const LoginPage = () => {
             />
           </div>
 
-          <div className={styles.inputGroup}>
+          <div className={styles.input_group}>
             <label htmlFor="password">Password</label>
             <Input
               type="password"
