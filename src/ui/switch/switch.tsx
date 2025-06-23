@@ -1,29 +1,22 @@
 import React from 'react';
 import styles from './Switch.module.scss';
-import { useLocalStorage } from '../../hooks';
 
 type SwitchProps = {
-  storageKey?: string;
+  enabled: boolean;
   onChange?: (checked: boolean) => void;
 };
 
-export const Switch: React.FC<SwitchProps> = ({ storageKey = 'switch-default', onChange }) => {
-  const [checked, setChecked] = useLocalStorage<boolean>(storageKey, false);
-
+export const Switch: React.FC<SwitchProps> = ({ enabled, onChange }) => {
   const toggle = () => {
-    setChecked(prev => {
-      const newValue = !prev;
-      onChange?.(newValue);
-      return newValue;
-    });
+    onChange?.(!enabled);
   };
 
   return (
     <button
-      className={`${styles.switch} ${checked ? styles.checked : ''}`}
+      className={`${styles.switch} ${enabled ? styles.checked : ''}`}
       onClick={toggle}
       role="switch"
-      aria-checked={checked}
+      aria-checked={enabled}
       type="button"
     >
       <div className={styles.thumb}></div>
