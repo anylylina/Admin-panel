@@ -1,14 +1,13 @@
-import React from 'react';
 import styles from './Switch.module.scss';
 
-type SwitchProps = {
+type Props = {
   enabled: boolean;
-  onChange?: (checked: boolean) => void;
+  onChange: (checked: boolean) => void;
 };
 
-export const Switch: React.FC<SwitchProps> = ({ enabled, onChange }) => {
+export const Switch = ({ enabled, onChange }: Props) => {
   const toggle = () => {
-    onChange?.(!enabled);
+    onChange(!enabled);
   };
 
   return (
