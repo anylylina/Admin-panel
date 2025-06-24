@@ -9,6 +9,15 @@
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   cursor: pointer;
+
+  &:disabled {
+    background-color: $color_gray_darcest;
+    cursor: auto;
+
+    &:hover {
+      background-color: $color_gray_darcest;
+    }
+  }
 }
 
 .blue {
