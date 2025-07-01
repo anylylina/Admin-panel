@@ -6,9 +6,12 @@ type Props = {
   name?: string;
   placeholder?: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: () => void;
   className?: string;
   disabled?: boolean;
+  error?: string;
+  label?: string;
 };
 
 export const Input = ({
@@ -17,18 +20,26 @@ export const Input = ({
   placeholder,
   value,
   onChange,
-  className = '',
+  onBlur,
   disabled = false,
+  className = '',
+  label = '',
+  error = '',
 }: Props) => {
   return (
-    <input
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      className={`${styles.input} ${className}`}
-      disabled={disabled}
-    />
+    <div className={styles.wrapper}>
+      {label && <label>{label}</label>}
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        className={`${styles.input} ${className}`}
+        disabled={disabled}
+      />
+      {error && <span className={styles.error}>{error}</span>}
+    </div>
   );
 };
