@@ -1,0 +1,25 @@
+{
+  "profile": {
+    "name": "typicode",
+    "avatarUrl": "https://artside.com.ua/tmp/cache/images/44/e6a/0986-630x394-r.jpg"
+  },
+
+  "cards": [
+    {
+      "balance": 5756.0,
+      "currency": "USD",
+      "card_holder": "Eddy Cusuma",
+      "valid_thru": "12/22",
+      "card_number": "3778 **** **** 1234",
+      "chip_type": "EMV"
+    },
+    {
+      "balance": 5756.0,
+      "currency": "USD",
+      "card_holder": "Eddy Cusuma",
+      "valid_thru": "12/22",
+      "card_number": "3778 **** **** 1234",
+      "chip_type": "EMV"
+    }
+  ]
+}

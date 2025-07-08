@@ -8,6 +8,7 @@ type Props = {
   icon?: React.ReactNode;
   type?: 'submit' | 'button';
   disabled?: boolean;
+  className?: string;
 };
 
 export const Button = ({
@@ -17,13 +18,14 @@ export const Button = ({
   icon,
   type = 'button',
   disabled = false,
+  className,
 }: Props) => {
   return (
     <button
       onClick={onClick}
       type={type}
       disabled={disabled}
-      className={`${styles.button} ${theme === 'gray' ? styles.gray : styles.blue}`}
+      className={`${styles.button} ${className} ${theme === 'gray' ? styles.gray : styles.blue}`}
     >
       {text}
       {icon}
