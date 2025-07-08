@@ -10,7 +10,12 @@ export const SearchInput = ({ placeholder = 'Search for something' }: Props) => 
   return (
     <div className={styles.wrapper}>
       <SearchIcon className={styles.icon} />
-      <Input type="text" placeholder={placeholder} className={styles.inputWithIcon} />
+      <Input
+        type="text"
+        placeholder={placeholder}
+        className={styles.inputWithIcon}
+        onChange={() => {}}
+      />
     </div>
   );
 };
