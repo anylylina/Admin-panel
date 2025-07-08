@@ -1,0 +1,78 @@
+@use '@/styles/colors.scss' as *;
+
+.dropdown {
+  position: relative;
+  width: 200px;
+  user-select: none;
+}
+
+.header {
+  padding: 10px 25px 10px 15px;
+  background-color: $color_white_normal;
+  border: 1px solid $color_white_dark;
+  color: $color_blue_pale;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &:hover {
+    background-color: $color_blue_pale;
+    color: $color_white_normal;
+  }
+
+  .placeholder {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+  }
+
+  .arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .arrow_open {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.disabled {
+  background-color: $color_gray_dark;
+  color: $color_black;
+  cursor: not-allowed;
+}
+
+.list {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  margin-top: 8px;
+  border: 1px solid $color_gray_dark;
+  border-radius: 15px;
+  background-color: $color_white_normal;
+  color: $color_blue_pale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.item {
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.active,
+.item:hover {
+  background-color: $color_blue_pale;
+  color: $color_white_normal;
+  border-radius: 15px;
+}
