@@ -1,7 +1,7 @@
 import styles from './avatar.module.scss';
 
 type AvatarProps = {
-  imageUrl?: string;
+  imageUrl?: string | null;
   alt?: string;
 };
 
