@@ -5,9 +5,25 @@ import { SettingIcon } from '../../ui/icons/settings-icon';
 import { SearchInput } from '../../ui/inputs/search-input';
 import styles from './header.module.scss';
 import { Account } from '../account/account';
+import { useEffect, useState } from 'react';
 
 export const Header = () => {
   const location = useLocation();
+  const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const res = await fetch('http://localhost:3000/profile');
+        const data = await res.json();
+        setAvatarUrl(data.avatarUrl);
+      } catch (error) {
+        console.error('Error loading profile:', error);
+      }
+    };
+
+    fetchProfile();
+  }, []);
 
   const pageTitles: Record<string, string> = {
     '/dashboard': 'Dashboard',
@@ -35,8 +51,7 @@ export const Header = () => {
         <SearchInput />
         <Button onClick={() => {}} icon={<SettingIcon />} />
         <Button onClick={() => {}} icon={<NotificationIcon />} />
-        <div className={styles.avatarIcon}></div>
-        <Account />
+        <Account imageUrl={avatarUrl} />
       </div>
     </header>
   );

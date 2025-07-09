@@ -1,5 +1,9 @@
 import { Avatar } from '../../ui/avatar';
 
-export const Account = () => {
-  return <Avatar />;
+type Props = {
+  imageUrl?: string | null;
+};
+
+export const Account = ({ imageUrl }: Props) => {
+  return <Avatar imageUrl={imageUrl} />;
 };
