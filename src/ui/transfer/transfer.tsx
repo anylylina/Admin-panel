@@ -26,7 +26,7 @@ export const Transfer: React.FC<Props> = ({ users, onTransfer }) => {
     const num = parseFloat(amount);
     if (!num || num <= 0) return;
     onTransfer(selectedUser, num);
-    setAmount;
+    setAmount('');
   };
 
   return (
